@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style1.css">
+    <link rel="stylesheet" href="assets/css/style2.css">
+    <link rel="stylesheet" href="assets/images/unicons/unicons.css">
+    <script src="assets/js/tailwind/cdntailwind.js"></script>
+    <script src="assets/js/flowbite.js"></script>
+</head>
+
+<body>
+    <!-- HEADER START -->
+    <header class=" relative wrapper bg-soft-primary !bg-[#262b32]"
+        style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;">
+        <nav class="navbar navbar-expand-lg center-nav navbar-light navbar-bg-light">
+            <div class="container   xl:flex-row lg:flex-row !flex-nowrap items-center">
+                <div class="navbar-brand w-full">
+                    <a href="index.html">
+                        <!--          <img src="assets/images/icons/logo-dark.png " srcset="./assets/img/logo@2x.png 2x" alt="image">-->
+                        <img src="https://asset.rokla.ir/storage/uploads/public/front/pics/logo-rokla.png " alt="image">
+
+                    </a>
+                </div>
+                <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
+                    <div class="offcanvas-header xl:hidden lg:hidden flex items-center justify-between flex-row p-6">
+                        <h3 class="text-white xl:text-[1.5rem] !text-[calc(1.275rem_+_0.3vw)] !mb-0">Sandbox</h3>
+                        <button type="button"
+                            class="btn-close btn-close-white mr-[-0.75rem] m-0 p-0 leading-none text-[#343f52] transition-all duration-[0.2s] ease-in-out border-0 motion-reduce:transition-none before:text-[1.05rem] before:content-['\ed3b'] before:w-[1.8rem] before:h-[1.8rem] before:leading-[1.8rem] before:shadow-none before:transition-[background] before:duration-[0.2s] before:ease-in-out before:flex before:justify-center before:items-center before:m-0 before:p-0 before:rounded-[100%] hover:no-underline bg-inherit before:bg-[rgba(255,255,255,.08)] before:font-Unicons hover:before:bg-[rgba(0,0,0,.11)] focus:outline-0"
+                            data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body xl:!ml-auto lg:!ml-auto flex  flex-col !h-full text-center" dir="rtl">
+
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown dropdown-mega ">
+                                <a class="nav-link " href="#" data-bs-toggle="dropdown">صفحه اصلی</a>
+
+                                <!--/.dropdown-menu -->
+                            </li>
+                            <li class="nav-item dropdown dropdown-mega">
+                                <a class="nav-link " href="#" data-bs-toggle="dropdown">نمونه قرداد</a>
+
+                                <!--/.dropdown-menu -->
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link " href="#" data-bs-toggle="dropdown">لیست محصول</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link " href="#" data-bs-toggle="dropdown">درخواست قرداد</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link " href="#" data-bs-toggle="dropdown">نوبت دهی</a>
+
+                            </li>
+                            <li class="nav-item dropdown dropdown-mega">
+                                <a class="nav-link " href="#" data-bs-toggle="dropdown">تماس با ما</a>
+
+                                <!--/.dropdown-menu -->
+                            </li>
+                            <li class="nav-item dropdown dropdown-mega">
+                                <a class="nav-link " href="#" data-bs-toggle="dropdown">درباره ی ما</a>
+
+                                <!--/.dropdown-menu -->
+                            </li>
+                        </ul>
+                        <!-- /.navbar-nav -->
+
+                        <!-- /.offcanvas-footer -->
+                    </div>
+
+                    <!-- /.offcanvas-body -->
+                </div>
+                <!-- /.navbar-collapse -->
+                <div class="navbar-other w-full !flex !ml-auto">
+                    <ul class="navbar-nav !flex-row !items-center !ml-auto">
+                        <li class="nav-item"><a class="nav-link" data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvas-search"><i
+                                    class="uil uil-search before:content-['\eca5'] !text-[1.1rem]"></i></a></li>
+                        <li class="nav-item ml-[.8rem]">
+                            <a class="nav-link !relative !flex !flex-row !items-center" data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvas-cart">
+                                <i class="uil uil-shopping-cart !text-[1.1rem] before:content-['\ecbd']"></i>
+                                <span
+                                    class="badge badge-cart bg-[#3f78e0] w-[0.9rem] h-[0.9rem] !flex items-center justify-center !text-[0.55rem] p-0 rounded-[100%] !bg-[rgba(63,120,224)] opacity-100">3</span>
+                            </a>
+                        </li>
+                        <li class="nav-item xl:hidden lg:hidden">
+                            <button class="hamburger offcanvas-nav-btn"><span></span></button>
+                        </li>
+                    </ul>
+                    <!-- /.navbar-nav -->
+                </div>
+                <!-- /.navbar-other -->
+            </div>
+            <!-- /.container -->
+        </nav>
+        <!-- /.navbar -->
+        <div class="offcanvas offcanvas-end bg-light" id="offcanvas-cart" data-bs-scroll="true">
+            <div class="offcanvas-header flex items-center justify-between p-[1.5rem]">
+                <h3 class="mb-0">Your Cart</h3>
+                <button type="button" class="btn-close m-0 p-0 mr-[-.5rem] leading-none text-[#343f52] transition-all duration-[0.2s] ease-in-out  border-0 motion-reduce:transition-none before:text-[1.05rem] before:content-['\ed3b'] before:w-[1.8rem] before:h-[1.8rem] before:leading-[1.8rem] before:shadow-none before:transition-[background] before:duration-[0.2s] before:ease-in-out before:flex before:justify-center before:items-center before:m-0 before:p-0 before:rounded-[100%] hover:no-underline bg-inherit before:bg-[rgba(0,0,0,.08)] before:font-Unicons hover:before:bg-[rgba(0,0,0,.11)] focus:outline-0
+            " data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body flex flex-col">
+                <div class="shopping-cart">
+                    <div class="shopping-cart-item flex justify-between !mb-4">
+                        <div class="flex flex-row">
+                            <figure class="!rounded-[.4rem] !w-[7rem]"><a href="shop-product.html">
+                                    <img class="!rounded-[.4rem]" src="assets/img/photos/sth1.jpg"
+                                        srcset="./assets/img/photos/sth1@2x.jpg 2x" alt="image"></a>
+                            </figure>
+                            <div class="!w-full !ml-[1rem]">
+                                <h3 class="post-title !text-[.8rem] !leading-[1.35] !mb-1"><a href="shop-product.html"
+                                        class="text-[#343f52] hover:text-[#3f78e0]">Nike Air Sneakers</a></h3>
+                                <p class="price !text-[.7rem]"><del class="text-[#9499a3]"><span
+                                            class="amount">$55.00</span></del> <ins
+                                        class="no-underline text-[#e2626b]"><span class="amount">$45.99</span></ins></p>
+                                <div class="form-select-wrapper">
+                                    <select
+                                        class="form-select !w-auto !min-w-[2.5rem] !bg-[right_0.4rem_center] !px-2 !py-[0.2rem] !text-[.7rem] !rounded-[.4rem]">
+                                        <option value="1" selected="">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                                <!--/.form-select-wrapper -->
+                            </div>
+                        </div>
+                        <div class="!ml-[.5rem]"><a href="#" class="text-[#343f52] hover:text-[#3f78e0]"><i
+                                    class="uil uil-trash-alt before:content-['\ed4b']"></i></a></div>
+                    </div>
+                    <!--/.shopping-cart-item -->
+                    <div class="shopping-cart-item flex justify-between !mb-4">
+                        <div class="flex flex-row">
+                            <figure class="!rounded-[.4rem] !w-[7rem]"><a href="shop-product.html"><img
+                                        class="!rounded-[.4rem]" src="assets/img/photos/sth2.jpg"
+                                        srcset="./assets/img/photos/sth2@2x.jpg 2x" alt="image"></a></figure>
+                            <div class="!w-full !ml-[1rem]">
+                                <h3 class="post-title !text-[.8rem] !leading-[1.35] !mb-1"><a href="shop-product.html"
+                                        class="text-[#343f52] hover:text-[#3f78e0]">Colorful Sneakers</a></h3>
+                                <p class="price !text-[.7rem]"><span class="amount">$45.00</span></p>
+                                <div class="form-select-wrapper">
+                                    <select
+                                        class="form-select !w-auto !min-w-[2.5rem] !bg-[right_0.4rem_center] !px-2 !py-[0.2rem] !text-[.7rem] !rounded-[.4rem]">
+                                        <option value="1" selected="">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                                <!--/.form-select-wrapper -->
+                            </div>
+                        </div>
+                        <div class="!ml-[.5rem]"><a href="#" class="text-[#343f52] hover:text-[#3f78e0]"><i
+                                    class="uil uil-trash-alt before:content-['\ed4b']"></i></a></div>
+                    </div>
+                    <!--/.shopping-cart-item -->
+                    <div class="shopping-cart-item flex justify-between !mb-4">
+                        <div class="flex flex-row">
+                            <figure class="!rounded-[.4rem] !w-[7rem]"><a href="shop-product.html"><img
+                                        class="!rounded-[.4rem]" src="assets/img/photos/sth3.jpg"
+                                        srcset="./assets/img/photos/sth3@2x.jpg 2x" alt="image"></a></figure>
+                            <div class="!w-full !ml-[1rem]">
+                                <h3 class="post-title !text-[.8rem] !leading-[1.35] !mb-1"><a href="shop-product.html"
+                                        class="text-[#343f52] hover:text-[#3f78e0]">Polaroid Camera</a></h3>
+                                <p class="price !text-[.7rem]"><span class="amount">$45.00</span></p>
+                                <div class="form-select-wrapper">
+                                    <select
+                                        class="form-select !w-auto !min-w-[2.5rem] !bg-[right_0.4rem_center] !px-2 !py-[0.2rem] !text-[.7rem] !rounded-[.4rem]">
+                                        <option value="1" selected="">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                                <!--/.form-select-wrapper -->
+                            </div>
+                        </div>
+                        <div class="!ml-[.5rem]"><a href="#" class="text-[#343f52] hover:text-[#3f78e0]"><i
+                                    class="uil uil-trash-alt before:content-['\ed4b']"></i></a></div>
+                    </div>
+                    <!--/.shopping-cart-item -->
+                </div>
+                <!-- /.shopping-cart-->
+                <div class="offcanvas-footer flex-col text-center">
+                    <div class="flex !w-full justify-between !mb-4">
+                        <span>Subtotal:</span>
+                        <span class="h6 !mb-0">$135.99</span>
+                    </div>
+                    <a href="#"
+                        class="btn btn-primary text-white !bg-[#3f78e0] border-[#3f78e0] hover:text-white hover:bg-[#3f78e0] hover:border-[#3f78e0] focus:shadow-[rgba(92,140,229,1)] active:text-white active:bg-[#3f78e0] active:border-[#3f78e0] disabled:text-white disabled:bg-[#3f78e0] disabled:border-[#3f78e0] btn-icon btn-icon-start rounded !w-full !mb-4 hover:translate-y-[-0.15rem] hover:shadow-[0_0.25rem_0.75rem_rgba(30,34,40,0.15)]"><i
+                            class="uil uil-credit-card !text-[.9rem] mr-[0.3rem] before:content-['\ea74']"></i>
+                        Checkout</a>
+                    <p class="!text-[.7rem] !mb-0">Free shipping on all orders over $50</p>
+                </div>
+                <!-- /.offcanvas-footer-->
+            </div>
+            <!-- /.offcanvas-body -->
+        </div>
+        <!-- /.offcanvas -->
+
+        <div class="offcanvas offcanvas-top bg-light" id="offcanvas-search" data-bs-scroll="true" dir="rtl">
+            <div class="container flex !flex-row py-6">
+                <form
+                    class="search-form relative before:content-['\eca5'] before:block before:absolute before:-translate-y-2/4 before:text-[1rem] before:text-[#343f52] before:z-[1] before:right-auto before:top-2/4 before:font-Unicons w-full before:left-0 focus:!outline-offset-0 focus:outline-0">
+                    <input id="search-form1" type="text"
+                        class="form-control text-[0.8rem] !shadow-none pl-[1.75rem] !pr-[.75rem] border-0 bg-inherit m-0 block w-full font-medium leading-[1.7] text-[#60697b] px-4 py-[0.6rem] rounded-[0.4rem] focus:!outline-offset-0 focus:outline-0"
+                        placeholder="دنبال چی می گردی؟">
+                </form>
+
+            </div>
+            <!-- /.container -->
+        </div>
+        <!-- /.offcanvas -->
+    </header>
+    <!-- HEADER END -->
+     
+    <section dir="rtl">
+        <div class="bg-white px-4 lg:px-8 2xl:px-20 row-first shadow-[0_1px_2px_rgba(0,0,0,0.12)] py-6">
+            <div>
+                <h1 class="font-bold text-2xl mb-4 text-center">
+                    مجموعه قرارداد
+                </h1>
+            </div>
+            <div class="flex justify-center flex-col items-center gap-7 overflow-x-scroll lg:overflow-x-auto">
+                <div class="flex items-center  py-1">
+                    <div class="flex items-center"><a href="/legalforms/contract/tags/tenant/"
+                            class="block w-max bg-[#e87c3f] px-4 py-1.5 ml-4 hover:text-zinc-200  text-white rounded-full text-sm">مستاجر</a>
+                    </div>
+                    <div class="flex items-center"><a href="/legalforms/contract/tags/sales-agreement/"
+                            class="block w-max bg-[#e87c3f] px-4 py-1.5 ml-4 hover:text-zinc-200  text-white rounded-full text-sm">مبایعه
+                            نامه</a></div>
+                    <div class="flex items-center"><a href="/legalforms/contract/tags/employment-contract/"
+                            class="block w-max bg-[#e87c3f] px-4 py-1.5 ml-4 hover:text-zinc-200  text-white rounded-full text-sm">قرارداد
+                            استخدام</a></div>
+                    <div class="flex items-center"><a href="/legalforms/contract/tags/take-stock/"
+                            class="block w-max bg-[#e87c3f] px-4 py-1.5 ml-4 hover:text-zinc-200  text-white rounded-full text-sm">سهام</a>
+                    </div>
+                    <div class="flex items-center"><a href="/legalforms/contract/tags/contractors/"
+                            class="block w-max bg-[#e87c3f] px-4 py-1.5 ml-4 hover:text-zinc-200  text-white rounded-full text-sm">پیمانکاران</a>
+                    </div>
+                </div>
+                <div>
+                    <div  >
+                        <form action="">
+
+                            
+                            <select class="px-20 border border-zinc-500 rounded-md py-2  " style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                                <option value="" hidden selected>دسته بندی</option>
+                                <option value="" class="hover:bg-[#dc8b5c]  cursor-pointer hover:text-black bg-zinc-100 border-[2px] border-[#e5e7eb]">خودرو</option>
+                                <option value="" class="hover:bg-[#e87c3f]  cursor-pointer hover:text-black bg-zinc-100 border-[2px] border-[#e5e7eb]">پیمانکاران</option>
+                                <option value="" class="hover:bg-[#e87c3f]  cursor-pointer hover:text-black bg-zinc-100 border-[2px] border-[#e5e7eb]">اجاره</option>
+                                <option value="" class="hover:bg-[#e87c3f]  cursor-pointer hover:text-black bg-zinc-100 border-[2px] border-[#e5e7eb]">فروش ملک</option>
+                                <option value="" class="hover:bg-[#e87c3f]  cursor-pointer hover:text-black bg-zinc-100 border-[2px] border-[#e5e7eb]">فروش کالا</option>
+                            </select>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section dir="rtl" class="bg-[#f5f5f5]">
+        <div class="row-contracts py-10 px-2 lg:px-4 2xl:px-16 flex flex-wrap">
+            <div class="box-contract w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-2 lg:p-4"><a
+                    href="/product/sample-contracts-of-private-companies/"
+                    class="bg-white rounded-lg flex flex-col border border-gray-100 cursor-pointer h-full">
+                    <h2 class="font-bold text-lg p-4">قراردادهای شرکت های خصوصی</h2>
+                    <div class="border-t border-gray-200 p-4 flex-grow flex flex-col justify-between">
+                        <div class="mb-11 text-sm">نمونه قراردادهای شرکت های خصوصی مجموعه کاملی از قراردادهای استخدامی
+                            مورد نیاز هر شرکت و کارفرما است. تصور کنید می‌خواهید تمام پرسنل سازمان شما مطابق با قانون
+                            کار استخدام شوند. این مجموعه قرارداد برای همین هدف است.</div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center"><span
+                                    class="blue-txt blue-primary-color font-bold pl-2">1,509,000</span><span
+                                    class="text-sm text-gray-primary">تومان</span></div>
+                            <div
+                                class="bg-[#e87c3f] view-link-btn flex items-center   transition-[0.5s] sm:opacity-50 rounded-md   text-sm font-bold px-4 py-1.5 !text-white">
+                                مشاهده </div>
+                        </div>
+                    </div>
+                </a></div>
+            <div class="box-contract w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-2 lg:p-4"><a
+                    href="/product/sample-employment-contracts/"
+                    class="bg-white rounded-lg flex flex-col border border-gray-100 cursor-pointer h-full">
+                    <h2 class="font-bold text-lg p-4">قراردادهای استخدامی</h2>
+                    <div class="border-t border-gray-200 p-4 flex-grow flex flex-col justify-between">
+                        <div class="mb-11 text-sm">نمونه قراردادهای استخدامی مجموعه کامل از قراردادهای استخدامی است.
+                            تصور کنید به عنوان کارفرما می‌خواهید با پرسنل خود قرارداد قانونی تنظیم کنید و روابط خود را
+                            از نظر حقوقی به بهترین شکل رقم بزنید. این مجموعه برای همین هدف است.</div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center"><span
+                                    class="blue-txt blue-primary-color font-bold pl-2">479,000</span><span
+                                    class="text-sm text-gray-primary">تومان</span></div>
+                            <div
+                                class="view-link-btn flex items-center   transition-[0.5s] sm:opacity-50 rounded-md   text-sm font-bold px-4 py-1 bg-[#e87c3f] text-white">
+                                مشاهده </div>
+                        </div>
+                    </div>
+                </a></div>
+            <div class="box-contract w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-2 lg:p-4"><a
+                    href="/product/sample-restaurant-contracts/"
+                    class="bg-white rounded-lg flex flex-col border border-gray-100 cursor-pointer h-full">
+                    <h2 class="font-bold text-lg p-4">قراردادهای رستوران</h2>
+                    <div class="border-t border-gray-200 p-4 flex-grow flex flex-col justify-between">
+                        <div class="mb-11 text-sm">نمونه قراردادهای رستوران مجموعه قراردادهای کامل برای کلیه پرسنل
+                            رستوران است. تصور کنید کارفرمای رستوران هستید و می‌خواهید با تمام پرسنل خود از قبیل آشپز،
+                            کارگر، پیک، صندوقدار و غیره قرارداد تنظیم کنید.این مجموعه برای همین کار است.</div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center"><span
+                                    class="blue-txt blue-primary-color font-bold pl-2">699,000</span><span
+                                    class="text-sm text-gray-primary">تومان</span></div>
+                            <div
+                                class="bg-[#e87c3f] view-link-btn flex items-center   transition-[0.5s] sm:opacity-50 rounded-md   text-sm font-bold px-4 py-1.5 text-white">
+                                مشاهده </div>
+                        </div>
+                    </div>
+                </a></div>
+            <div class="box-contract w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-2 lg:p-4"><a
+                    href="/product/sample-beauty-salon-contracts/"
+                    class="bg-white rounded-lg flex flex-col border border-gray-100 cursor-pointer h-full">
+                    <h2 class="font-bold text-lg p-4">قراردادهای سالن زیبایی</h2>
+                    <div class="border-t border-gray-200 p-4 flex-grow flex flex-col justify-between">
+                        <div class="mb-11 text-sm">نمونه قراردادهای سالن زیبایی مجموعه کاملی از قراردادهای مهم سالن
+                            زیبایی است. تصور کنید صاحب سالن زیبایی هستید و حالا می‌خواهید روابط کاری افراد حاضر در سالن
+                            را به صورت قانونی سر و سامان دهید. لیست قراردادها را در ادامه بخوانید.</div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center"><span
+                                    class="blue-txt blue-primary-color font-bold pl-2">879,000</span><span
+                                    class="text-sm text-gray-primary">تومان</span></div>
+                            <div
+                                class="view-link-btn flex items-center bg-[#e87c3f]  transition-[0.5s] sm:opacity-50 rounded-md   text-sm font-bold px-4 py-1.5 text-white">
+                                مشاهده </div>
+                        </div>
+                    </div>
+                </a></div>
+            <div class="box-contract w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-2 lg:p-4"><a
+                    href="/product/sample-startup-contract/"
+                    class="bg-white rounded-lg flex flex-col border border-gray-100 cursor-pointer h-full">
+                    <h2 class="font-bold text-lg p-4">قرارداد استارتاپ</h2>
+                    <div class="border-t border-gray-200 p-4 flex-grow flex flex-col justify-between">
+                        <div class="mb-11 text-sm">مجموعه‌ای کامل از قراردادهایی است که هر استارتاپ یا اشخاص مرتبط با
+                            استارتاپ به آن نیاز دارند.</div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center"><span
+                                    class="blue-txt blue-primary-color font-bold pl-2">639,000</span><span
+                                    class="text-sm text-gray-primary">تومان</span></div>
+                            <div
+                                class="view-link-btn flex items-center bg-[#e87c3f]  transition-[0.5s] sm:opacity-50 rounded-md   text-sm font-bold px-4 py-1.5 text-white">
+                                مشاهده </div>
+                        </div>
+                    </div>
+                </a></div>
+            <div class="box-contract w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-2 lg:p-4"><a
+                    href="/product/sample-fast-food-contracts/"
+                    class="bg-white rounded-lg flex flex-col border border-gray-100 cursor-pointer h-full">
+                    <h2 class="font-bold text-lg p-4">قراردادهای فست فود</h2>
+                    <div class="border-t border-gray-200 p-4 flex-grow flex flex-col justify-between">
+                        <div class="mb-11 text-sm">نمونه قراردادهای فست فود مجموعه کاملی از قراردادهای مربوط به فست فود
+                            است. تصور کنید کارفرما هستید و قصد دارید روابط خود را با کلیه پرسنل فست فود به صورت قانونی
+                            سر و سامان دهید. این مجموعه قرارداد دقیقا برای همین هدف است.</div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center"><span
+                                    class="blue-txt blue-primary-color font-bold pl-2">609,000</span><span
+                                    class="text-sm text-gray-primary">تومان</span></div>
+                            <div
+                                class="view-link-btn flex items-center bg-[#e87c3f]  transition-[0.5s] sm:opacity-50 rounded-md   text-sm font-bold px-4 py-1.5 text-white">
+                                مشاهده </div>
+                        </div>
+                    </div>
+                </a></div>
+            <div class="box-contract w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-2 lg:p-4"><a
+                    href="/product/sample-meter-contracting-contract/"
+                    class="bg-white rounded-lg flex flex-col border border-gray-100 cursor-pointer h-full">
+                    <h2 class="font-bold text-lg p-4">قراردادهای پیمانکاری متری</h2>
+                    <div class="border-t border-gray-200 p-4 flex-grow flex flex-col justify-between">
+                        <div class="mb-11 text-sm">این مجموعه قرارداد، مجموعه کاملی از قراردادهای پیمانکاری متری است.
+                            یعنی محاسبه دستمزد به ازای هر متر است.</div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center"><span
+                                    class="blue-txt blue-primary-color font-bold pl-2">1,599,000</span><span
+                                    class="text-sm text-gray-primary">تومان</span></div>
+                            <div
+                                class="view-link-btn flex items-center bg-[#e87c3f]  transition-[0.5s] sm:opacity-50 rounded-md   text-sm font-bold px-4 py-1.5 text-white">
+                                مشاهده </div>
+                        </div>
+                    </div>
+                </a></div>
+            <div class="box-contract w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-2 lg:p-4"><a
+                    href="/product/sample-real-estate-contracts/"
+                    class="bg-white rounded-lg flex flex-col border border-gray-100 cursor-pointer h-full">
+                    <h2 class="font-bold text-lg p-4">قراردادهای مشاور املاک</h2>
+                    <div class="border-t border-gray-200 p-4 flex-grow flex flex-col justify-between">
+                        <div class="mb-11 text-sm">نمونه قراردادهای مشاور املاک یک پکیج کامل و دقیق از قراردادهای
+                            کاربردی است که هر بنگاه املاک برای انجام معاملات مشتریان خود به آن‌ها نیاز دارد.</div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center"><span
+                                    class="blue-txt blue-primary-color font-bold pl-2">2,239,000</span><span
+                                    class="text-sm text-gray-primary">تومان</span></div>
+                            <div
+                                class="view-link-btn flex items-center bg-[#e87c3f]  transition-[0.5s] sm:opacity-50 rounded-md   text-sm font-bold px-4 py-1.5 text-white">
+                                مشاهده </div>
+                        </div>
+                    </div>
+                </a></div>
+            <div class="box-contract w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-2 lg:p-4"><a
+                    href="/product/sample-pharmacy-contracts/"
+                    class="bg-white rounded-lg flex flex-col border border-gray-100 cursor-pointer h-full">
+                    <h2 class="font-bold text-lg p-4">قراردادهای داروخانه</h2>
+                    <div class="border-t border-gray-200 p-4 flex-grow flex flex-col justify-between">
+                        <div class="mb-11 text-sm">برای ایجاد روابط کاری قانونی با پرسنل داروخانه از این مجموعه قرارداد
+                            استفاده کنید.</div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center"><span
+                                    class="blue-txt blue-primary-color font-bold pl-2">479,000</span><span
+                                    class="text-sm text-gray-primary">تومان</span></div>
+                            <div
+                                class="view-link-btn flex items-center bg-[#e87c3f]  transition-[0.5s] sm:opacity-50 rounded-md   text-sm font-bold px-4 py-1.5 text-white">
+                                مشاهده </div>
+                        </div>
+                    </div>
+                </a></div>
+            <div class="box-contract w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-2 lg:p-4"><a
+                    href="/product/sample-mobile-contracts/"
+                    class="bg-white rounded-lg flex flex-col border border-gray-100 cursor-pointer h-full">
+                    <h2 class="font-bold text-lg p-4">قراردادهای موبایل</h2>
+                    <div class="border-t border-gray-200 p-4 flex-grow flex flex-col justify-between">
+                        <div class="mb-11 text-sm">مجموعه‌ای کامل از قراردادهای فروش نقدی و اقساطیِ موبایل نو و کارکرده
+                            است.</div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center"><span
+                                    class="blue-txt blue-primary-color font-bold pl-2">469,000</span><span
+                                    class="text-sm text-gray-primary">تومان</span></div>
+                            <div
+                                class="view-link-btn flex items-center bg-[#e87c3f]  transition-[0.5s] sm:opacity-50 rounded-md   text-sm font-bold px-4 py-1.5 text-white">
+                                مشاهده </div>
+                        </div>
+                    </div>
+                </a></div>
+            <div class="box-contract w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-2 lg:p-4"><a
+                    href="/product/sample-freelance-contracts/"
+                    class="bg-white rounded-lg flex flex-col border border-gray-100 cursor-pointer h-full">
+                    <h2 class="font-bold text-lg p-4">قراردادهای فریلنسری</h2>
+                    <div class="border-t border-gray-200 p-4 flex-grow flex flex-col justify-between">
+                        <div class="mb-11 text-sm">این پکیج، مجموعه کاملی از قراردادهای مربوط به فریلنسرها یا دورکارها
+                            است.</div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center"><span
+                                    class="blue-txt blue-primary-color font-bold pl-2">899,000</span><span
+                                    class="text-sm text-gray-primary">تومان</span></div>
+                            <div
+                                class="view-link-btn flex items-center bg-[#e87c3f]  transition-[0.5s] sm:opacity-50 rounded-md   text-sm font-bold px-4 py-1.5 text-white">
+                                مشاهده </div>
+                        </div>
+                    </div>
+                </a></div>
+            <div class="box-contract w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-2 lg:p-4"><a
+                    href="/product/sample-laptop-contracts/"
+                    class="bg-white rounded-lg flex flex-col border border-gray-100 cursor-pointer h-full">
+                    <h2 class="font-bold text-lg p-4">قراردادهای لپ تاپ</h2>
+                    <div class="border-t border-gray-200 p-4 flex-grow flex flex-col justify-between">
+                        <div class="mb-11 text-sm">این مجموعه قرارداد، شامل چند قرارداد مهم و مرتبط با معامله لپ تاپ
+                            است.</div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center"><span
+                                    class="blue-txt blue-primary-color font-bold pl-2">409,000</span><span
+                                    class="text-sm text-gray-primary">تومان</span></div>
+                            <div
+                                class="view-link-btn flex items-center bg-[#e87c3f]  transition-[0.5s] sm:opacity-50 rounded-md   text-sm font-bold px-4 py-1.5 text-white">
+                                مشاهده 
+                            </div>
+                        </div>
+                    </div>
+                </a></div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer class="w-full bg-[#262b32]  dark:bg-gray-900 py-16">
+        <div class="md:px-12 lg:px-28">
+            <div class="container m-auto space-y-6 text-zinc-400 dark:text-gray-300">
+                <img src="https://asset.rokla.ir/storage/uploads/public/front/pics/logo-rokla.png" alt="logo tailus"
+                    class="m-auto w-20" />
+                <ul role="list" class="flex flex-col items-center justify-center gap-4 py-4 sm:flex-row sm:gap-8">
+                    <li role="listitem"><a href="#" class="hover:text-primary">تماس با ما</a></li>
+                    <li role="listitem"><a href="#" class="hover:text-primary">نوبت دهی</a></li>
+                    <li role="listitem"><a href="#" class="hover:text-primary">لیست محصولات</a></li>
+                    <li role="listitem"><a href="#" class="hover:text-primary">ٌصفحه اصلی</a></li>
+                </ul>
+                <div class="m-auto flex w-max items-center justify-between space-x-4">
+                    <a href="tel:+243996660436" aria-label="call">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="m-auto w-5"
+                            viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a href="mailto:hello@mail.com" aria-label="send mail">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="m-auto w-5"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a href="#" title="facebook" target="blank" aria-label="facebook">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="m-auto w-5"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a href="#" title="linkedin" target="blank" aria-label="linkedin">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="m-auto w-5"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="text-center">
+                    <span class="text-sm tracking-wide">Copyright © tailus <span id="year"></span> | All right
+                        reserved</span>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- /FOOTER -->
+
+
+    <script src="assets/js/app.js"></script>
+
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/theme.js"></script>
+</body>
+
+</html>
